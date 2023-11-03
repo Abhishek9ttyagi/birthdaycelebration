@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="open-in-laptop">
+      Open in your laptop for better experience of this website
+    </div>
+    <div class="complete">
+      <div class="container">
+        <img class="backg" src="sheetalm.gif" />
+        <div class="card">
+          <div class="card-inner">
+            <div class="outside">
+              <h3>🎉🎂 Happy Birthday, sheetal🥰! 🎂🎉</h3>
+              <h4>
+                On this special day, I want to remind you just how amazing and
+                unique you are. Your presence in my life has brought so much
+                joy, laughter, and positivity. Today, it's your turn to be
+                celebrated and showered with love. May this year be filled with
+                endless opportunities, beautiful moments, and all the happiness
+                in the world. You deserve nothing but the best, and I'm grateful
+                to have you as a friend. Even though we may be miles apart, know
+                that my thoughts and best wishes are always with you. Here's to
+                another year of adventures, laughter, and unforgettable
+                memories! Have an incredible birthday, sheetal ! 🎈🥳 Your
+                friendship is a gift I cherish every day. Let's make this year
+                even more special, just like you are. <br />
+                🎁💖 Cheers to you! 🥂🎉
+              </h4>
+            </div>
+            <div class="inside">
+              <img src="sheetall.gif" alt="sheetal birthday celebration" />
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="frames frame1">
+            <img src="img1.jpg" alt="" />
+            <p>Keep smiling,Keep shining</p>
+          </div>
+          <div class="frames frame2">
+            <img src="img2.jpg" alt="" />
+            <p>On this occasion bring you lot of happiness and success</p>
+          </div>
+          <div class="frames frame3">
+            <img src="img3.jpg" alt="" />
+            <p>May God bless you on your birthday, and always</p>
+          </div>
+        </div>
+      </div>
+      <!-- <script src="./confetti.js"></script> -->
+      <div class="wrapper" id="tcan">
+        <div class="cake">
+          <div class="lyr lyr-1"></div>
+          <div class="lyr lyr-2"></div>
+          <div class="lyr lyr-3"></div>
+        </div>
+        <div class="candle"></div>
+        <div class="fram" id="frrrm">
+          <div class="smoke smk-1"></div>
+          <div class="smoke smk-2"></div>
+          <div class="smoke smk-3"></div>
+          <div class="smoke smk-4"></div>
+          <div class="smoke smk-5"></div>
+
+          <div class="flm-part red fliped"></div>
+          <div class="flm-part orange"></div>
+          <div class="flm-part yellow fliped"></div>
+          <div class="flm-part white"></div>
+        </div>
+        <div class="op" id="inop"></div>
+      </div>
+      <script>
+        alert("to celebrate your birthday extinguish the candle!️🕯️");
+        // const au = new Audio("Heeriye.mp3");
+        // au.addEventListener("loadedmetadata", function () {
+        //   au.play();
+        // });
+        const myDiv = document.getElementById("frrrm");
+        myDiv.onclick = function () {
+          let ding = new Audio("happyb.mp3");
+          // au.pause();
+          ding.play();
+          myDiv.style.opacity = 0;
+          const imgele = document.createElement("img");
+          imgele.src = "./sheetal_in.png";
+          const texEle = document.createElement("p");
+          texEle.textContent = "🥳Happy birthday Sheetal🥳";
+
+          var hidd = document.querySelector(".op");
+          hidd.appendChild(imgele);
+          hidd.appendChild(texEle);
+          hidd.classList.add("op");
+          // hidd.textContent += ` ${newText}`;
+          hidd.classList.remove("op");
+          // document.getElementById("inop").classList.remove("op");
+        };
+      </script>
+    </div>
+  </body>
+</html>

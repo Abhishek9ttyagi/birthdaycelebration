@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+}
+
+@keyframes show-open-in-laptop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.open-in-laptop {
+  position: fixed;
+  top: 20%;
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  animation: show-open-in-laptop 1s ease-in-out;
+}
+
+/* @media (min-width: 1300px) {
+  .open-in-laptop {
+    display: none;
+  }
+}
+@media (max-width: 1299px) {
+  .complete {
+    display: none;
+  }
+  .open-in-laptop {
+    display: block;
+  }
+} */
+
+.backg {
+  width: 100%;
+  height: 100%;
+}
+.card {
+  position: absolute;
+  width: 385px;
+  height: 495px;
+  top: 100px;
+  left: 200px;
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.block {
+  position: absolute;
+  top: 200px;
+  right: 600px;
+  perspective: 800px;
+}
+.outside,
+.inside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.8rem;
+}
+.inside img {
+  width: 384px;
+  height: 494px;
+}
+.outside {
+  z-index: 1000;
+  background-color: blanchedalmond;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  backface-visibility: hidden;
+}
+.outside h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: salmon;
+  margin-bottom: 8px;
+}
+.inside {
+  background-color: rgb(255, 244, 79);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: rotateY(180deg);
+}
+.inside h4 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.frames {
+  width: 400px;
+  height: 150px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0.8rem;
+
+  transform: rotateY(-230deg) rotateX(20deg);
+  position: absolute;
+}
+.frames img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.frames p {
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotateY(180deg);
+}
+.frames:nth-child(1) {
+  top: -110px;
+  z-index: -1;
+  background-color: coral;
+}
+.frames:nth-child(2) {
+  background-color: goldenrod;
+}
+.frames:nth-child(3) {
+  top: 100px;
+  background-color: burlywood;
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  top: 850px;
+  left: 43%;
+  width: 240px;
+  height: 480px;
+}
+
+.cake {
+  position: absolute;
+  bottom: 0;
+}
+
+.lyr {
+  width: 240px;
+  height: 96px;
+  position: absolute;
+  background-color: currentColor;
+  border-radius: 120px / 24px;
+}
+
+.lyr-1 {
+  color: bisque;
+  bottom: 0;
+}
+
+.lyr-2 {
+  color: rgb(167, 98, 14);
+  bottom: 48px;
+}
+
+.lyr-3 {
+  color: rgb(68, 41, 7);
+  bottom: 96px;
+  background-image: radial-gradient(
+    ellipse 7.5rem 1.5rem at 7.5rem 1.5rem,
+    gold,
+    gold 5%,
+    #e99788 100%,
+    transparent
+  );
+}
+
+.candle {
+  position: absolute;
+  background-color: red;
+  width: 32px;
+  left: 104px;
+  height: 160px;
+  bottom: 160px;
+  border-radius: 20px / 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    white,
+    white 10%,
+    transparent 10%,
+    transparent 20%
+  );
+}
+
+.candle::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 4px;
+  height: 32px;
+  border-radius: 4px / 2.4px;
+  left: 15px;
+  top: -22px;
+}
+
+.candle::after {
+  background-color: red;
+  display: block;
+  content: "";
+  width: 32px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.fram {
+  position: absolute;
+  left: 104px;
+}
+
+.smoke {
+  color: currentColor;
+  background-color: currentColor;
+  top: 125px;
+  width: 6px;
+  height: 6px;
+  position: relative;
+  animation-name: burn-smoke;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.smk-1 {
+  left: 8px;
+  animation-duration: 0.5s;
+}
+
+.smk-2 {
+  left: -8px;
+  animation-duration: 0.6s;
+}
+
+.smk-3 {
+  left: 16px;
+  animation-duration: 0.7s;
+}
+
+.smk-4 {
+  left: 24px;
+  animation-duration: 0.8s;
+}
+.smk-5 {
+  left: 32px;
+  animation-duration: 0.9s;
+}
+
+.flm-part {
+  background-color: currentColor;
+  border-color: currentColor;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(60deg) skewX(0deg) scale(1);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.flm-part.fliped {
+  transform: rotate(120deg) skewX(0deg) scale(1);
+}
+
+.flm-part::before {
+  content: "";
+  position: absolute;
+  border-radius: 0 0 0 100%;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  border-bottom-width: 32px;
+  width: 32px;
+  height: 8px;
+  left: -16px;
+  top: -8px;
+}
+
+.flm-part.fliped::before {
+  border-radius: 100% 0 0 0;
+  border-bottom: 0 solid transparent;
+  border-top-style: solid;
+  border-top-color: inherit;
+  border-top-width: 32px;
+  width: 32px;
+  height: 8px;
+  left: -16px;
+  top: 0px;
+}
+
+.red {
+  color: red;
+  top: 84.4px;
+  opacity: 0.7;
+  animation-name: burn-red;
+  animation-duration: 1s;
+}
+
+.orange {
+  color: orange;
+  top: 57px;
+  opacity: 0.8;
+  box-shadow: 0 0 16px orange;
+  animation-name: burn-orange;
+  animation-duration: 0.4s;
+}
+
+.yellow {
+  color: yellow;
+  top: 28px;
+  opacity: 0.9;
+  box-shadow: 0 0 16px yellow;
+  animation-name: burn-yellow;
+  animation-duration: 1.6s;
+}
+
+.white {
+  color: white;
+  box-shadow: 0 0 16px white;
+  animation-name: burn-white;
+  animation-duration: 1.8s;
+}
+
+@keyframes burn-smoke {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(4);
+    opacity: 0;
+    top: 0;
+  }
+}
+
+@keyframes burn-red {
+  0% {
+    transform: rotate(120deg) skewX(0deg) scale(1.8);
+  }
+  20% {
+    transform: rotate(118deg) skewX(5deg) scale(2);
+  }
+  40% {
+    transform: rotate(120deg) skewX(0deg) scale(1.8);
+  }
+  60% {
+    transform: rotate(122deg) skewX(-5deg) scale(2);
+  }
+  100% {
+    transform: rotate(120deg) skewX(0deg) scale(1.8);
+  }
+}
+
+@keyframes burn-white {
+  0% {
+    transform: rotate(60deg) skewX(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(50deg) skewX(-3deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(60deg) skewX(0deg) scale(1);
+  }
+  60% {
+    transform: rotate(70deg) skewX(3deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(60deg) skew(0deg) scale(1);
+  }
+}
+
+@keyframes burn-yellow {
+  0% {
+    transform: rotate(120deg) skewX(0deg) scale(1.4);
+  }
+  20% {
+    transform: rotate(110deg) skewX(10deg) scale(1.5);
+  }
+  40% {
+    transform: rotate(120deg) skewX(0deg) scale(1.4);
+  }
+  60% {
+    transform: rotate(130deg) skewX(-10deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(120deg) skew(0deg) scale(1.4);
+  }
+}
+
+@keyframes burn-orange {
+  0% {
+    transform: rotate(65deg) skewX(0deg) scale(1.6);
+  }
+  20% {
+    transform: rotate(60deg) skewX(-15deg) scale(1.7);
+  }
+  40% {
+    transform: rotate(65deg) skewX(0deg) scale(1.6);
+  }
+  60% {
+    transform: rotate(70deg) skewX(2deg) scale(1.7);
+  }
+  100% {
+    transform: rotate(65deg) skew(0deg) scale(1.6);
+  }
+}
+
+.op {
+  display: none;
+}
+
+#inop {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: contain;
+
+  background-color: rgb(163, 118, 73);
+  border: 1px solid rgb(68, 166, 97);
+  padding: 10px;
+}
+#inop img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+#inop p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
